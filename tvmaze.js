@@ -10,7 +10,7 @@ async function getShowsByTerm() {
   const $term = $(`#search-query`).val();
 
   const search = await axios.get(
-    `http://api.tvmaze.com/search/shows?q=${$term}`
+    `https://api.tvmaze.com/search/shows?q=${$term}`
   );
 
   // $(`#search-query`).val(``);
