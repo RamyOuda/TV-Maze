@@ -80,7 +80,7 @@ $goButton.on("click", async function (evt) {
 
 async function getEpisodesOfShow(id) {
   const episodes = await axios.get(
-    `http://api.tvmaze.com/shows/${id}/episodes`
+    `https://api.tvmaze.com/shows/${id}/episodes`
   );
 
   return episodes.data.map((e) => ({
