@@ -11,7 +11,11 @@
   <body>
     <div class="container">
       <h1 class="text-center my-5">TV Maze</h1>
-      <form class="row justify-content-center" id="search-form">
+      <form
+        onsubmit="return false;"
+        class="row justify-content-center"
+        id="search-form"
+      >
         <input class="col-3 mx-3" id="search-query" required />
         <button class="btn btn-primary col-1 mx-3" type="submit">Go!</button>
       </form>

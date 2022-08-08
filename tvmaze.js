@@ -4,6 +4,8 @@ const $showsList = $("#shows-list");
 const $episodesArea = $("#episodes-area");
 const $searchForm = $("#search-form");
 
+const $goButton = $(`button`);
+
 async function getShowsByTerm() {
   const $term = $(`#search-query`).val();
 
@@ -11,7 +13,7 @@ async function getShowsByTerm() {
     `http://api.tvmaze.com/search/shows?q=${$term}`
   );
 
-  $(`#search-query`).val(``);
+  // $(`#search-query`).val(``);
 
   const shows = [];
 
@@ -70,9 +72,10 @@ async function searchForShowAndDisplay() {
   populateShows(shows);
 }
 
-$searchForm.on("submit", async function (evt) {
-  evt.preventDefault();
+$goButton.on("click", async function (evt) {
   await searchForShowAndDisplay();
+  // evt.preventDefault();
+  // return false;
 });
 
 async function getEpisodesOfShow(id) {
